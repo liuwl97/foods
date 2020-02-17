@@ -1,0 +1,183 @@
+.main{
+	width: 100%;
+	overflow: hidden;
+	background: #f4f4f4;
+}
+/*top*/
+.top{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background-color: #fc7e45;
+	text-align: center;
+	position: relative;
+}
+.top_left{
+	position: absolute;
+	left: 0;
+	top: 0px;
+}
+.top_center{
+	font-weight: bold;
+	font-size: 18px;
+	color:#fff;
+}
+.top_right{
+	position: absolute;
+	right: 15px;
+	top:0;
+	color:#fff;
+}
+.top_right a{
+	text-decoration: none;
+	color:#fff;
+}
+
+/*banner*/
+.bann{
+	width: 100%;
+	height: 100%;
+	max-height: 300px;
+	overflow: hidden;
+}
+
+@media screen and (min-width:640px){
+   .bann{
+	max-height: 350px;
+	}
+}
+@media screen and (max-width:400px){
+   .bann{
+	max-height: 300px;
+	}
+}
+.bann img{
+	width: 100%;
+	overflow: hidden;
+}
+
+/*nav*/
+.nav{
+	margin-bottom: 1rem;
+	padding:0 1rem;
+	height: 70px;
+	background-color: #fff;
+}
+.nav_first{
+	width: 100%;
+	height: 100%;
+}
+.nav_first li{
+	text-align: center;
+	list-style: none;
+	width: 33%;
+	height: 70px;
+	float: left;
+}
+.nav_img{
+	display: block;
+	height: 28px;
+	width: 28px;
+	margin: 8px auto;
+	background-image: url("../img/icon/难易度.png");
+	background-repeat: no-repeat;
+}
+.img1{
+	background-image: url("../img/icon/时间.png");
+	background-size: 26px 26px;
+	margin:9px auto 7px;
+}
+.img2{
+	background-image: url("../img/icon/口味.png");
+}
+/*toutiao*/
+.toutiao{
+	margin-top:1.6px;
+	padding:1rem 0;
+}
+.toutiao_line{
+	padding:0 1rem;
+	height: 80px;
+	background-color:#fff;
+}
+.toutiao_line .tit{
+	padding-top: 10px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.toutiao_line .cont{
+	padding-top: 5px;
+}
+
+/*paihang*/
+.paihang{
+	padding: .7rem 1rem 1rem 1rem;
+	background-color: #fff;
+	height: auto;
+}
+.PH_top{
+	margin-bottom:12px;
+}
+.PH_tit{
+	padding-left: 10px;
+	line-height: 26px;
+	font-size: 16px;
+	font-weight:bold;
+	font-family: '微软雅黑';
+	border-left: 3px solid #fc7e45;
+}
+.shicai_lay{
+	padding:0 1rem;
+}
+.shicai{
+	height: 22px;
+	border-bottom: 1px dashed #dbdbdb;
+	margin-top: 10px;
+}
+
+/*action*/
+.action{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding:1rem 1rem;
+	height: auto;
+	background-color: #fff;
+}
+.action_cont{
+	width: 100%;
+	margin-bottom: 10px;
+}
+.action_img{
+	width: 50%;
+
+}
+.action_img img{
+	width: 100%;
+	height: 100%;
+}
+.action_zf{
+	width: 50%;	
+}
+
+.cont_span{
+	text-align: center;
+	font-size:22px;
+	font-weight: bold;
+	padding-top:20px;
+}
+.action_ms{
+	padding:5px 1rem 0;
+	word-wrap: break-word;
+}
+
+
+/*温馨提示*/
+.reminder{
+	padding:1rem 1rem;
+	height: auto;
+	background-color: #fff;
+	margin-bottom: 1rem;
+}
+.rem_cont{
+	padding:0 1rem;
+}

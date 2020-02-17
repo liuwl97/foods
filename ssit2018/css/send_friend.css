@@ -1,0 +1,90 @@
+.main{
+	width: 100%;
+	overflow: hidden;
+	background: #f4f4f4;
+}
+/*top*/
+.top{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background-color: #fc7e45;
+	text-align: center;
+	position: relative;
+}
+.top_left{
+	position: absolute;
+	left: 0;
+	top: 0px;
+}
+.top_center{
+	font-weight: bold;
+	font-size: 18px;
+	color:#fff;
+}
+.c-left{
+	margin-right: 8px;
+}
+
+
+/*personal*/
+.personal{
+	height: auto;
+	margin: 1rem 0;
+	padding: 0 1rem 10px;
+	background-color: #fff;
+}
+.p_cent{
+	width: auto;
+	margin-top:5px;
+}
+.p_title{
+	padding-top:18px;
+}
+.p_title input{
+	width: 80%;
+	height: 20px;
+	border:1px solid #eee;
+	border-radius: 3px;
+}
+.p_cent_img{
+	margin-top: 15px;
+	height: 120px;
+}
+.p_cent_img span{
+	display: block;
+	height: 100px;
+	margin-left: 10px;
+	overflow: hidden;
+	
+}
+.p_cent_img span em{
+	display: block;
+	width: 20%;
+	height: 100%;
+	background-image: url('../img/icon/send_friend.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 90%;
+	float: left;
+}
+.p_cent_img span input{
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 20;
+	cursor: pointer;
+	opacity: 0;
+	
+}
+.send_friend_but{
+	width: 100%;
+	height: 35px;
+	font-weight: bold;
+	background-color: #fff;
+	margin-bottom: 1rem;
+	text-align: center;
+	line-height: 35px;
+	color:#fc7e45;
+	cursor: pointer;
+}

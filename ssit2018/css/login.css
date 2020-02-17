@@ -1,0 +1,266 @@
+
+.main{
+	width: 100%;
+	 background: #fff;
+}
+.top{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background-color: #fc7e45;
+	text-align: center;
+	font-size:18px;
+	position: relative;
+}
+.top_left{
+	position: absolute;
+	left: 0;
+	top: 0px;
+}
+.top_center{
+	font-weight: bold;
+	font-size: 22px;
+	color:#fff;
+}
+.top_right{
+	position: absolute;
+	right: 15px;
+	top:0;
+	color:#fff;
+}
+.top_right a{
+	text-decoration: none;
+	color:#fff;
+}
+.cont{
+	padding:50px;
+}
+.cont form{
+	display: block;
+	width: 100%;
+}
+.cont_name,.cont_pwd,.veri{
+	width: 100%;
+	height: 70px;
+}
+.cont_mes1,.cont_mes2{
+	display: none;
+ 	margin-left: 55px;
+ 	font-size:15px;
+ 	color:red;
+ }
+@media screen and (min-width: 640px) {
+   .cont_img{
+		width: 8%;
+	}
+}
+.cont_img{
+	width: 10%;
+	height: 32px;
+	line-height: 30px;
+	float: left;
+	background-image: url(../img/icon/user.png);
+	background-repeat:no-repeat;
+}
+.cont_img1{
+	width: 10%;
+	height: 32px;
+	line-height: 30px;
+	float: left;
+	background-image: url(../img/icon/pwd.png);
+	background-repeat:no-repeat;
+}
+.cont_name input,.cont_pwd input{
+	float: right;
+	width: 89%;
+	height: 30px;
+	margin-bottom: 5px;
+}
+.veri{
+	width: 100%;
+	overflow: hidden;
+}
+.ver_l{
+	display: block;
+	float: left;
+	width: 60%;
+	height: 30px;
+	margin-left: 10%;
+}
+.ver_l .verifytext{
+	width: 100%;
+	height: 100%;
+}
+.ver_r{
+	display: block;
+	float: right;
+	width: 20%;
+	box-sizing: border-box;
+}
+.ver_r img{
+	background-position: 2px 0px;
+}
+@media screen and (max-width: 380px) {
+	  .cont_name input,.cont_pwd input{
+		width: 70%;
+	}
+ }
+@media screen and (max-width: 410px) {
+	  .cont_img1, .cont_img{
+		width: 15%;
+	}
+		
+ }
+ @media screen and (max-width: 518px) {
+	  .cont_name input,.cont_pwd input{
+		width: 80%;
+	}
+		.ver_l{
+			margin-left: 19%;
+			width: 40%;
+		}
+		.ver_r{
+			float: left;
+			margin-left: 7px;
+		}
+
+
+ }
+.cont_login{
+	background: #fc7e45;
+    border: 0 none;
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    height: 40px;
+    width:100%;
+    color: #fff;
+    border-radius: 3px;
+    color: #fff;
+    outline: 0;
+    cursor: pointer;
+	
+}
+.cont_login:hover{
+	background:#fa6622;
+}
+.cont_miss{
+	float: right;
+	margin-top:10px;
+}
+.cont_miss a{
+	color:#666;
+}
+.cont_miss a:hover{
+	color:#000;
+}/*.main{
+	width: 100%;
+	 background: #fff;
+}
+.top{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background-color: #fc7e45;
+	text-align: center;
+	font-size:18px;
+	position: relative;
+}
+.top_left{
+	position: absolute;
+	left: 0;
+	top: 0px;
+}
+.top_center{
+	font-weight: bold;
+	font-size: 22px;
+	color:#fff;
+}
+.top_right{
+	position: absolute;
+	right: 15px;
+	top:0;
+	color:#fff;
+}
+.top_right a{
+	text-decoration: none;
+	color:#fff;
+}
+.cont{
+	padding:50px;
+}
+.cont form{
+	display: block;
+	width: 100%;
+}
+.cont_name,.cont_pwd,.verify{
+	width: 100%;
+	height: 70px;
+}
+.cont_mes1,.cont_mes2{
+	display: none;
+ 	margin-left: 55px;
+ 	font-size:15px;
+ 	color:red;
+ }
+@media screen and (min-width: 640px) {
+   .cont_img{
+		width: 10%;
+	}
+}
+.cont_img{
+	width: 32px;
+	height: 32px;
+	line-height: 30px;
+	float: left;
+	background-image: url(../img/icon/user.png);
+	background-repeat:no-repeat;
+}
+.cont_img1{
+	width: 32px;
+	height: 32px;
+	line-height: 30px;
+	float: left;
+	background-image: url(../img/icon/pwd.png);
+	background-repeat:no-repeat;
+}
+.cont_name input,.cont_pwd input{
+	float: right;
+	width: 89%;
+	height: 30px;
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+@media screen and (max-width: 450px) {
+	  .cont_name input,.cont_pwd input{
+		float: right;
+		width: 83%;
+		height: 30px;
+	}
+ }
+.cont_login{
+	background: #fc7e45;
+    border: 0 none;
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    height: 40px;
+    width:100%;
+    color: #fff;
+    border-radius: 3px;
+    color: #fff;
+    outline: 0;
+    cursor: pointer;
+	
+}
+.cont_login:hover{
+	background:#fa6622;
+}
+.cont_miss{
+	float: right;
+	margin-top:10px;
+}
+.cont_miss a{
+	color:#666;
+}
+.cont_miss a:hover{
+	color:#000;
+}*/

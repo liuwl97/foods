@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>cooking</title>
+	<link rel="stylesheet" href="css/friend_comment.css">
+	<link rel="stylesheet" href="css/public.css">
+</head>
+
+<body>
+<div class="main">
+	<!--top-->
+	<div class="top">
+		  <span class="top_left">
+		  	<a href="JavaScript:history.back(-1)">
+		  		<img src="img/ico-back-left.png" height="50" width="50">
+		  	</a>
+		  </span>
+		  <div class="top_center">
+		  	<span class="c-left"><a href="" >详情</a></span>
+		  </div>
+		  
+	</div>
+
+	<!--personal-->
+	<div class="personal">
+		<div class="p_top">
+			<span class="p_top_l left"><img src="{$user->getUser_img()}" /></span>
+			<div class="p_top_r left">
+				<span class="p_top_r_t">{$user->getUsername()}</span>
+				<span class="p_top_r_b">{$user->getAddtime()}</span>
+			</div>
+		</div>
+
+		<div class="p_cent">
+			<span>{$user->getTitle()}</span>
+			<div class="p_cent_img">
+				{foreach item=imgs from=$img}
+					<span><img src="{$imgs->getImgpath()}"></span>
+				{/foreach}
+				
+			</div>
+		</div>
+
+		<form action="" method="post">
+		<!--comment-->
+		<div class="comment">
+			<div class="comm">
+				<span class="comm_tit">共有<i class="comm_count"> {$count} </i>条评论</span>
+				<div class="comm_send">
+					<input type="text" name="comment" class="comm_send_input" placeholder="输你所想...">
+					<span class="comm_click" data="{$sessuid}">评论</span>
+					<input type="hidden" name="wenzhangid" value="{$user->getid()}">
+				</div>
+			</div>
+		</div>
+		</form>
+
+		<form action="" method="post">
+			{foreach item=usermess from=$usermes}
+			<div class="comm_mes">
+				<div class="p_top_1">
+					<span class="p_top_l_1 left"><img src="{$usermess->getUser_img()}" /></span>
+					<div class="p_top_r_1 left">
+						{if $user->getUid() eq $usermess->getUid()}
+							<span class="p_top_r_1_t left">{$usermess->getUsername()}</span>
+							<div class="louzhu left">楼主</div>
+						{else}
+							<span class="p_top_r_1_t left">{$usermess->getUsername()}</span>
+						{/if}
+						<span class="p_top_r_1_b ">{$usermess->getAddtime()}</span>
+						<div class="comm_cont">{$usermess->getComment()}</div>
+					</div>
+					<span class="right">
+							<em><input type="radio" name="radio" value="{$usermess->getId()}"></em> <!-- {$vo.id} -->
+							<i>赞&nbsp;<font style="color:red">{$usermess->getNum()}</font></i>
+						</span>
+				</div>
+			</div>
+			{/foreach}
+		</form>
+	</div>
+
+	
+
+
+	
+
+	<!--foot-->
+	<div class="foot">
+			<ul class="foot_first">
+				<li><a href="index.php">
+						<span>
+							<img src="img/icon/首页.png" width="28px" height="28px">
+						</span>
+						首页
+					</a>
+				</li>
+				<li><a href="friends.php">
+					<span><img src="img/icon/圈子ing.png" width="28px" height="28px"></span><i class="locat_ing">圈子</i></a>
+				</li>
+				<li><a href="myself.php">
+					<span><img src="img/icon/我的.png" width="28px" height="28px"></span>我的</a>
+				</li>
+			</ul>
+	</div>
+
+</div>
+
+
+{literal}
+<script src="js/jquery-3.1.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+	//点赞
+	$('.right em').click(function(){
+		var checked = $('.right em input[type=radio]:checked');
+		var id = checked.val();
+		//alert(id);
+			 if (id!="") {
+    				//$(this).parents('form').submit();
+		  		$.ajax({
+					type:"POST",
+					url: "friends_commentAzan.php",
+					data:{radio:$('.right em input[type=radio]:checked').val()},
+					success:function(data){
+						var res = JSON.parse(data);
+						//alert(res);
+						checked.parent().next().children().text(res['zanshu']);
+						checked.parent().css({'background-image':'url(img/icon/zaned.png)'});
+					}
+				});
+		     }
+	})
+
+	//评论
+	$('.comm_click').click(function(){
+		var uid = $('.comm_click').attr('data');
+		//alert(uid);
+		if(uid!="x"){
+			//$(this).parents('form').submit();
+			$.ajax({
+				type:"POST",
+				url:'friends_commentsend.php',
+				data: $('form').serialize(),
+				success:function(data){
+					//alert(res.comment);
+					$('.new').hide();
+					 window.location.reload();
+					
+				}
+			});
+		}else{
+			alert("登录过后才能进行评论！");return false;
+		}
+		
+	})
+
+})
+</script>
+{/literal}
+</body>
+</html>

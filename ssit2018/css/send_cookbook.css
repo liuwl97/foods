@@ -1,0 +1,248 @@
+.main{
+	width: 100%;
+	overflow: hidden;
+	background: #f4f4f4;
+}
+/*top*/
+.top{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	background-color: #fc7e45;
+	text-align: center;
+	position: relative;
+}
+.top_left{
+	position: absolute;
+	left: 0;
+	top: 0px;
+}
+.top_center{
+	font-weight: bold;
+	font-size: 18px;
+	color:#fff;
+}
+.top_right{
+	position: absolute;
+	right: 15px;
+	top:0;
+	color:#fff;
+}
+.top_right a{
+	display: block;
+	width: 100%;
+	height:100%;
+	text-decoration: none;
+	color:#fff;
+}
+
+/*banner
+	width: 100%;
+	height: 100%;*/
+.bann{
+	width: 100%;
+	overflow: hidden;
+	
+	position: relative;
+}
+.bann img{
+	width: 100%;
+}
+.file{
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	position: absolute;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.uploadimg{
+	display: block; 
+	width: auto;
+	height: 30px;
+	background-color: #fc7e45;
+	border-radius: 3px;
+	border:none;
+	color:#fff;
+	cursor: pointer;
+	position: absolute;
+	bottom:10px;
+	left: 50%;
+	margin-left: -80px;
+	z-index: 100;
+	padding-left:5px;
+	padding-right:5px;
+	box-sizing: border-box;
+	display: none;
+
+}
+/*nav*/
+.nav{
+	margin-bottom: 1rem;
+	padding:0 1rem;
+	height: auto;
+	background-color: #fff;
+}
+.nav_first{
+	width: 100%;
+	height: 100%;
+}
+.nav_first li{
+	text-align: center;
+	list-style: none;
+	width: 33%;
+	height: auto;
+	padding-bottom: 8px;
+	float: left;
+}
+.nav_img{
+	display: block;
+	height: 28px;
+	width: 28px;
+	margin: 8px auto;
+	background-image: url("../img/icon/难易度.png");
+	background-repeat: no-repeat;
+}
+.img1{
+	background-image: url("../img/icon/时间.png");
+	background-size: 26px 26px;
+	margin:9px auto 7px;
+}
+.img2{
+	background-image: url("../img/icon/口味.png");
+}
+/*toutiao*/
+.toutiao{
+	margin-top:1.6px;
+	padding:1rem 0;
+}
+.toutiao_line{
+	padding:0 1rem 5px;
+
+	height: auto;
+	background-color:#fff;
+}
+.toutiao_line .tit,.toutiao_line .cont{
+	padding-top: 10px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.tit_l,.cont_l{
+	width: 10%;
+}
+.toutiao_line input,.toutiao_line textarea{
+	margin-left:16px;
+	width: 80%;
+}
+.toutiao_line .cont{
+	padding-top: 8px;
+}
+
+/*paihang*/
+.paihang{
+	padding: .7rem 1rem 1rem 1rem;
+	background-color: #fff;
+	height: auto;
+}
+.PH_top{
+	margin-bottom:12px;
+}
+.PH_tit{
+	padding-left: 10px;
+	line-height: 26px;
+	font-size: 16px;
+	font-weight:bold;
+	font-family: '微软雅黑';
+	border-left: 3px solid #fc7e45;
+}
+.shicai_lay{
+	padding:0 1rem;
+}
+.shicai{
+	height: 22px;
+	border-bottom: 1px dashed #dbdbdb;
+	margin-top: 10px;
+}
+@media screen and (max-width:430px){
+	.shicai_l,.shicai_r{
+		width: 45%;
+	}
+	.shicai_l input,.shicai_r input{
+		display: block;
+		width: 98%;
+		height: 100%;
+	}
+}
+
+/*action*/
+.action{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding:1rem 1rem;
+	height: auto;
+	background-color: #fff;
+}
+.action_cont{
+	width: 100%;
+	margin-bottom: 10px;
+}
+.action_img{
+	width: 50%;
+}
+.action_img input{
+	margin:0 auto;
+}
+
+.action_zf{
+	width: 50%;	
+}
+
+.cont_span{
+	text-align: center;
+	font-size:22px;
+	font-weight: bold;
+	padding-top:20px;
+}
+.action_ms input{
+	width: 90%;
+}
+.addinput{
+	width: 60px;
+	height: 30px;
+	border-radius: 3px;
+	background-color: #fc7e45;
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	color: #fff;
+	margin: 10px auto 0;
+}
+
+/*温馨提示*/
+.reminder{
+	padding:1rem 1rem;
+	height: auto;
+	background-color: #fff;
+	margin-bottom: 1rem;
+}
+.rem_cont{
+	padding:0 1rem;
+}
+.rem_cont textarea{
+	width: 100%;
+}
+#submitall{
+	    width: 240px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: #fc7e45;
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    margin: 10px auto 0;
+}
